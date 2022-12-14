@@ -1,0 +1,25 @@
+{
+    "idf": "fm-hmi-hello-1",
+    "icon": "images-regular",
+    "name": "网络组件",
+    "describe": "网络加载的组件",
+    "type": "hmi",
+    "mode": "form-ui",
+    "terminal": "desktop",
+    "config": {
+      "_comp_addr": "FormHmiHello",
+      "_comp_tag": "form-hmi-hello",
+      "_panel_tag": "form-hmi-hello-panel",
+      "__config__": {
+        "span": 24,
+        "showLabel": false,
+        "info": "世界很美好"
+      },
+      "props": {},
+      "style": {
+        "width": "100%"
+      },
+      "events": {},
+      "exports": {}
+    }
+}
