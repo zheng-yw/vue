@@ -1,16 +1,16 @@
 <template>
-  <div class="hello">
+  <div class="compo">
     <img alt="Vue logo" src="../../assets/logo.jpg"/>
-    <h1>Hello: {{ msg }}</h1>
+    <h1>{{ msg }}</h1>
     <Talk :msg="conf.__config__.info"/>
   </div>
 </template>
 
 <script>
-import Talk from "./compo/Talk.vue";
+import Talk from "./compos/Talk.vue";
 
 export default {
-  name: "Hello",
+  name: "<%= options.cname %>",
   props: {
     msg: String,
     conf: Object

@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: "HelloPanel",
+  name: "<%= options.cname %>Panel",
   props: {
     activeData: Object
   }

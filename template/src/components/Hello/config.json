@@ -7,9 +7,9 @@
     "mode": "form-ui",
     "terminal": "desktop",
     "config": {
-      "_comp_addr": "FormHmiHello",
-      "_comp_tag": "form-hmi-hello",
-      "_panel_tag": "form-hmi-hello-panel",
+      "_comp_addr": "<%= options.cname %>",
+      "_comp_tag": "<%= options.cname %>",
+      "_panel_tag": "<%= options.cname %>Panel",
       "__config__": {
         "span": 24,
         "showLabel": false,

@@ -2,7 +2,7 @@ module.exports = (api, options, rootOptions) => {
 	api.extendPackage({
 		scripts: {
 			"serve": "vue-cli-service serve",
-			"build": "build",
+			"build": "build " + options.cname,
 			"lint": "vue-cli-service lint"
 		},
 		dependencies: {
@@ -19,7 +19,7 @@ module.exports = (api, options, rootOptions) => {
 			"vue-template-compiler": "^2.6.11"
 		}
 	});
-  if (api.options.eui) {
+  if (options.eui) {
     api.extendPackage({
       dependencies: {
         "element-ui": "^2.15.6"
@@ -31,5 +31,16 @@ module.exports = (api, options, rootOptions) => {
       .filter(path => path.startsWith('src/') || path.startsWith('public/'))
       .forEach(path => delete files[path]);
   });
-	api.render('./template');
+  api.render('./template');
+  if(options.cname != 'Hello') {
+    api.render(files => {
+      Object.keys(files)
+        .filter(path => path.startsWith('src/components'))
+        .forEach(path => {
+          let key = path.replace(/Hello/g, options.cname);
+          files[key] = files[path];
+          delete files[path];
+        });
+    });
+  }
 };

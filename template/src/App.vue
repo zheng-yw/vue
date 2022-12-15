@@ -1,24 +1,24 @@
 <template>
   <div id="app">
     <div class="left">
-      <Hello :msg="msg" :conf="config"/>
+      <<%= options.cname %> :msg="msg" :conf="config"/>
     </div>
     <div class="right">
-      <HelloPanel :activeData="config"/>
+      <<%= options.cname %>Panel :activeData="config"/>
     </div>
   </div>
 </template>
 
 <script>
-import Hello from "./components/Hello/Hello.vue";
-import HelloPanel from "./components/Hello/HelloPanel.vue";
-import config from "./components/Hello/config.json";
+import <%= options.cname %> from "./components/<%= options.cname %>/<%= options.cname %>.vue";
+import <%= options.cname %>Panel from "./components/<%= options.cname %>/<%= options.cname %>Panel.vue";
+import config from "./components/<%= options.cname %>/config.json";
 
 export default {
   name: "App",
   components: {
-    Hello,
-    HelloPanel
+    <%= options.cname %>,
+    <%= options.cname %>Panel
   },
   data() {
     return {

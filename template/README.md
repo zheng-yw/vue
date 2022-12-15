@@ -15,11 +15,6 @@ npm run serve
 npm run build
 ```
 
-### 也可直接如下命令编译
-```
-build
-```
-
 ### Lints and fixes files
 ```
 npm run lint
