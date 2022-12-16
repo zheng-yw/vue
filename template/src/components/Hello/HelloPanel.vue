@@ -21,10 +21,10 @@
 
 <script>
 export default {
-  name: "<%= options.cname %>Panel",
+  name: '<%= options.cname %>Panel',
   props: {
-    activeData: Object
-  }
+    activeData: Object,
+  },
 };
 </script>
 

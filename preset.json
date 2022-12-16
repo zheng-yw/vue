@@ -7,26 +7,5 @@
 			"config": "airbnb",
 			"lintOn": ["save", "commit"]
 		}
-	},
-  "config": {
-    "eslintConfig": {
-      "root": true,
-      "env": {
-        "node": true
-      },
-      "extends": [
-        "plugin:vue/essential",
-        "eslint:recommended"
-      ],
-      "parserOptions": {
-        "parser": "babel-eslint"
-      },
-      "rules": {}
-    },
-    "browserslist": [
-      "> 1%",
-      "last 2 versions",
-      "not dead"
-    ]
-  }
+	}
 }

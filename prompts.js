@@ -11,5 +11,11 @@ module.exports = [
     type: 'confirm',
     message: 'Install element-ui ?',
     default: true
+  },
+  {
+    name: 'sto',
+    type: 'confirm',
+    message: 'Install Store ?',
+    default: false
   }
 ]

@@ -6,6 +6,8 @@
     "type": "hmi",
     "mode": "form-ui",
     "terminal": "desktop",
+    "version": "0.1.0",
+    "author": "zhangsan",
     "config": {
       "_comp_addr": "<%= options.cname %>",
       "_comp_tag": "<%= options.cname %>",

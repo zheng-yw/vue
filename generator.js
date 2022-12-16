@@ -16,13 +16,26 @@ module.exports = (api, options, rootOptions) => {
 			"babel-eslint": "^10.1.0",
 			"eslint": "^6.7.2",
 			"eslint-plugin-vue": "^6.2.2",
+      "url-loader": "^4.1.1",
 			"vue-template-compiler": "^2.6.11"
-		}
+		},
+    eslintConfig: {
+      "rules": {
+        "no-underscore-dangle": "off"
+      }
+    }
 	});
   if (options.eui) {
     api.extendPackage({
       dependencies: {
         "element-ui": "^2.15.6"
+      }
+    });
+  }
+  if (options.sto) {
+    api.extendPackage({
+      dependencies: {
+        "vuex": "^3.1.1"
       }
     });
   }
@@ -41,6 +54,11 @@ module.exports = (api, options, rootOptions) => {
           files[key] = files[path];
           delete files[path];
         });
+    });
+  }
+  if (!options.sto) {
+    api.render(files => {
+      delete files['src/store/index.js'];
     });
   }
 };

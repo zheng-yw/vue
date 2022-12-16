@@ -10,22 +10,22 @@
 </template>
 
 <script>
-import <%= options.cname %> from "./components/<%= options.cname %>/<%= options.cname %>.vue";
-import <%= options.cname %>Panel from "./components/<%= options.cname %>/<%= options.cname %>Panel.vue";
-import config from "./components/<%= options.cname %>/config.json";
+import <%= options.cname %> from './components/<%= options.cname %>/<%= options.cname %>.vue';
+import <%= options.cname %>Panel from './components/<%= options.cname %>/<%= options.cname %>Panel.vue';
+import config from './components/<%= options.cname %>/config.json';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     <%= options.cname %>,
-    <%= options.cname %>Panel
+    <%= options.cname %>Panel,
   },
   data() {
     return {
-      msg: "Welcome to Remote Vue.js App",
-      config: config.config
+      msg: 'Welcome to Remote Vue.js App',
+      config: config.config,
     }
-  }
+  },
 };
 </script>
 
@@ -44,12 +44,12 @@ html, body {
 }
 .left {
   float: left;
-  width: calc(100% - 405px);
+  width: calc(100% - 395px);
 }
 .right {
   float: right;
-  padding: 20px;
-  width: 360px;
+  padding: 12px 18px 15px 15px;
+  width: 356px;
   text-align: left;
   border-left: 1px gray solid;
   height: 100%;
