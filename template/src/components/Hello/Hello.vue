@@ -4,7 +4,7 @@
     <h1>{{ msg }}</h1>
     <Talk :msg="conf.__config__.info"/>
     <%_ if (options.sto) { _%>
-    <button @click="setMsg">更改store为内容</button>
+    <button type="button" @click="setMsg">更改store为内容</button>
     <%_ } _%>
   </div>
 </template>
