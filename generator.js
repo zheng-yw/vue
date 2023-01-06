@@ -21,7 +21,16 @@ module.exports = (api, options, rootOptions) => {
 		},
     eslintConfig: {
       "rules": {
-        "no-underscore-dangle": "off"
+        "no-underscore-dangle": "off",
+        "no-console": "off",
+        "no-alert": "off",
+        "no-new-func": "off",
+        "max-len": [
+          "error",
+          {
+            "code": 200
+          }
+        ]
       }
     }
 	});

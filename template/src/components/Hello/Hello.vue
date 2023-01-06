@@ -45,9 +45,9 @@ export default {
     },
     <%_ if (options.sto) { _%>
     setMsg() {
-      console.log('store message before: ', this.getMessage);
+      const before = this.getMessage;
       this.$store.commit('setMessage', this.conf.__config__.info);
-      console.log('store message after: ', this.getMessage);
+      alert(`更改前：${before}\n更改后：${this.getMessage}`);
     },
     <%_ } _%>
   },
